@@ -7,9 +7,9 @@
   
   // Resource configuration
   "hostRequirements": {
-    "cpus": 2,
-    "memory": "8gb",
-    "storage": "32gb"
+    "cpus": 4,
+    "memory": "16gb",
+    "storage": "16gb"
   },
 
   // Features to add
