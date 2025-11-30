@@ -24,6 +24,11 @@
     }
   },
 
+  // Environment variables
+  "containerEnv": {
+    "UV_LINK_MODE": "copy"
+  },
+
   // VS Code customizations
   "customizations": {
     "vscode": {
@@ -58,7 +63,8 @@
         "notebook.codeActionsOnSave": {
           "source.fixAll": true,
           "source.organizeImports": true
-        }
+        },
+        "terminal.integrated.defaultProfile.linux": "bash"
       }
     }
   },
@@ -73,11 +79,8 @@
   },
 
   // Post-create command
-  "postCreateCommand": "python --version && uv --version && ruff --version",
+  "postCreateCommand": "python --version && uv --version && ruff --version && uv sync",
 
   // Use non-root user
-  "remoteUser": "vscode",
-
-  // Set bash as default shell
-  "terminal.integrated.defaultProfile.linux": "bash"
+  "remoteUser": "vscode"
 }
